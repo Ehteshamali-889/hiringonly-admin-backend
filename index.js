@@ -4,10 +4,11 @@ const Product = require("./models/product.model.js");
 const productRoute = require("./routes/product.route.js");
 const jobRoute = require("./routes/job.route.js");
 const app = express();
+const port = process.env.PORT || 3000;
 
 // middleware
 app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
 
 
 // routes
@@ -28,9 +29,10 @@ mongoose
   )
   .then(() => {
     console.log("Connected to database!");
-    app.listen(3000, () => {
-      console.log("Server is running on port 3000");
+    app.listen(port, () => {
+      console.log(`Server is running on port ${port}`);
     });
+
   })
   .catch(() => {
     console.log("Connection failed!");
