@@ -26,6 +26,37 @@ const JobSchema = mongoose.Schema(
             type: String,
             required: false,
         },
+
+        experience: {
+            type: String,
+            required: false,
+        },
+
+        fullDescription:{
+            type: String,
+            required: true,
+        },
+
+        skills:{
+            type: String,
+            required: false,
+        },
+
+        jobType:{
+            type: String,
+            required: false,
+        },
+
+        location:{
+            type: String,
+            required: false,
+        },
+
+        applyLink:{
+            type: String,
+            required: false,
+        }
+        
     },
     {
         timestamps: true,

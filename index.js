@@ -4,7 +4,9 @@ const Product = require("./models/product.model.js");
 const productRoute = require("./routes/product.route.js");
 const jobRoute = require("./routes/job.route.js");
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3010;
+var cors = require('cors')
+app.use(cors());
 
 // middleware
 app.use(express.json());
